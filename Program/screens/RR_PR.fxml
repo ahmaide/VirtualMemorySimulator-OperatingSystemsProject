@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #868686;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Program.Main">
+   <children>
+      <BorderPane layoutX="244.0" layoutY="110.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="65.0" prefWidth="200.0" style="-fx-background-color: #868686;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="90.0" layoutY="20.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #454647;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                     <children>
+                        <Text fill="WHITE" layoutX="233.0" layoutY="35.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Virtual Memory Simulator">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <Pane maxHeight="500.0" maxWidth="650.0" prefHeight="400.0" prefWidth="450.0" style="-fx-background-color: #868686;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" layoutX="75.0" maxWidth="450.0" prefHeight="235.0" prefWidth="450.0" spacing="20.0">
+                     <children>
+                        <HBox prefHeight="50.0" prefWidth="450.0" spacing="20.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" onMouseClicked="#RR" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #A73C47;" text="Round Robin" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXCheckBox checkedColor="#a73c47" onAction="#autoTQ" prefHeight="50.0" prefWidth="70.0" text="Auto" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </JFXCheckBox>
+                              <JFXTextArea fx:id="tQ" focusColor="#a73c47" labelFloat="true" prefHeight="52.0" prefWidth="140.0" promptText="Time quantum" style="-fx-background-color: #F4F4F4;" viewOrder="1.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </JFXTextArea>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="450.0" spacing="20.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" onMouseClicked="#FIFO" prefHeight="50.0" prefWidth="450.0" style="-fx-background-color: #A73C47;" text="First In First Out" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <JFXButton buttonType="RAISED" onMouseClicked="#LRU" prefHeight="50.0" prefWidth="450.0" style="-fx-background-color: #A73C47;" text="Least Recently Used" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+               </BorderPane.margin>
+            </Pane>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER" maxHeight="45.0" minWidth="45.0" prefHeight="45.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="exitButton" onMouseClicked="#exit" prefHeight="40.0" prefWidth="215.0" style="-fx-background-color: #45818e;" text="Exit" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton onMouseClicked="#run" prefHeight="40.0" prefWidth="215.0" style="-fx-background-color: #45818e;" text="Run" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
